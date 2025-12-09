@@ -1,0 +1,175 @@
+.card{
+    background: var(--containerBgColor);
+    color: white;
+    border: 1px solid var(--containerBorderColor);
+    border-radius: 48px;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 300ms ease, transform 1000ms ease;
+    box-shadow: 0px 0px 30px var(--containerBoxShadowColor);
+}
+
+.card img{
+    max-width: 40%;
+    border-radius: 48px;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.cardToolTip{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background:#4E2473;;
+    max-width: max-content;
+    padding: 5px 10px;
+    border-radius: 16px;
+    border: 1px solid var(--containerBorderColor);
+    box-shadow: 0px 0px 30px var(--containerBoxShadowColor);
+}
+
+.cardTitle{
+    transition: inherit;
+    font-size:48px; 
+    margin: 0;
+}
+
+.cardDesc{
+    max-width: 450px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.cardParameters{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.cardParameters div{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.cardParameters div p{
+    margin: 0;
+}
+.largeParameter{
+    font-size: 20px;
+    font-weight: bold;
+}
+.smallParameter{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.openFormButton{
+    display: flex;
+    justify-content: center;
+    max-width: max-content;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    background: #4E2473;
+    box-shadow: 0px 0px 30px var(--containerBoxShadowColor);
+    border: 1px solid var(--containerBorderColor);
+    border-radius: 16px;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+@media (max-width:1200px) and (min-width:768px){
+    .card img{
+        max-width: 45%;
+    }
+
+    .cardTitle{
+        font-size: 24px;
+    }
+    .cardDesc{
+        font-size: 16px;
+        max-width: 350px;
+    }
+
+    .cardParameters{
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .largeParameter{
+        font-size: 12px;
+    }
+    .smallParameter{
+        font-size: 10px;
+    }
+    .openFormButton{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width:767px) {
+    .card{
+        flex-direction: column;
+        padding: 0;
+        padding: 20px 0 0 0;
+        gap: 20px;
+        &:hover{transform: none;}
+    }
+    .card img{
+        max-width: 100%;
+        border-radius: 0 0 48px 48px;
+    }
+
+    .cardToolTip{
+        font-size: 12px;
+    }
+
+    .cardTitle{
+        font-size: 24px;
+        max-width: 350px;
+        @media (max-width:425px) {
+            max-width: 260px;
+        }
+    }
+
+    .cardDesc{
+        font-size: 16px;
+        max-width: 350px;
+        @media (max-width:425px) {
+            max-width: 260px;
+        }
+    }
+
+    .cardParameters{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .cardParameters div{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .largeParameter{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .smallParameter{
+        font-size: 10px;
+        font-weight: 300;
+    }
+    .openFormButton{
+        max-width: 100%;
+    }
+}

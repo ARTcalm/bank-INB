@@ -1,0 +1,263 @@
+.investAccountFormContainer{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.sequenceCardsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:30px;
+}
+
+.sequenceCard{
+    max-width: 350px;
+    padding: 20px;
+    background: var(--containerBgColor);
+    border:1px solid var(--containerBorderColor);
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px var(--containerBoxShadowColor);
+    color: white;
+}
+
+.sequenceCard .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sequenceCard .title span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    width: 60px;
+    height: 60px;
+    background: #4e2473;
+    border: 1px solid var(--containerBorderColor);
+    border-radius: 16px;
+    margin-top: -40px;
+    box-shadow: 0px 0px 30px var(--containerBoxShadowColor);
+}
+
+.sequenceCard p{
+    max-width: 280px;
+    text-align: center;
+}
+
+.formContainer{
+    background: var(--containerBgColor);
+    border:1px solid var(--containerBorderColor);
+    border-radius: 32px;
+    box-shadow: 0px 0px 30px var(--containerBoxShadowColor);
+    padding: 60px 250px;
+    color: white;
+}
+
+.formContainer h1{
+    font-size: 32px;
+    margin: 0;
+}
+
+.formContainer h2{
+    font-size: 16px;
+}
+
+.formContainer form{
+    display: flex;
+    gap: 20px;
+}
+
+.inputContainer{
+    display: flex;
+    width: 75%;
+    background: var(--containerBgColor);
+    border:1px solid var(--containerBorderColor);
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px var(--containerBoxShadowColor);
+    color: white;
+    transition: all 500ms ease;
+}
+
+.inputContainer:focus-within{
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 15px white;
+}
+
+.inputContainer span{
+    padding: 15px 0px 15px 15px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.inputContainer input{
+    width: 100%;
+    padding: 15px 15px 15px 0;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    background: none;
+    border: 0;
+    outline: 0;
+    color: inherit;
+    &::placeholder{
+        color:inherit;
+        font-size: inherit;
+    }
+}
+
+
+.submitContainer{
+    background: var(--containerBgColor);
+    border: 1px solid var(--containerBorderColor);
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px var(--containerBoxShadowColor);
+    color: white;
+    max-height: max-content;
+    max-width: max-content;
+    transition: all 500ms ease;
+}
+
+.submitContainer:hover{
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 15px white;
+}
+
+.submitContainer input{
+    padding: 15px 30px;
+    background: none;
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    color: inherit;
+}
+
+@media (max-width:1200px) and (min-width:768px){
+    .investAccountFormContainer h1{
+        margin-bottom: 40px;
+    }    
+    .sequenceCard{
+        max-width: 180px;
+    }
+
+    .sequenceCard .title span{
+        margin-top: -50px;
+    }
+    
+    .sequenceCard p{
+        font-size: 10px;
+    }
+    
+    .formContainer{
+        border-radius: 16px;
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .investAccountFormContainer{
+        margin-bottom: 15px;
+    }
+
+    .investAccountFormContainer h1{
+        margin-bottom: 30px;
+    }
+
+    .sequenceCardsContainer{
+        margin-bottom: 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sequenceCard{
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .sequenceCard .title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sequenceCard .title span{
+        font-size: 14px;
+        font-weight: 700;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        margin-top: -25px;
+    }
+
+    .sequenceCard p{
+        max-width: 80%;
+        font-size: 10px;
+    }
+
+    .arrow{
+        display: none;
+    }
+
+    .formContainer{
+        border-radius: 16px;
+        padding: 30px 20px;
+    }
+
+    .formContainer h1{
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .formContainer h2{
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .formContainer p{
+        font-size: 12px;
+    }
+
+    .formContainer form{
+        display: flex;
+        gap: 10px;
+    }
+
+    .inputContainer{
+        border-radius: 16px;
+    }
+
+
+    .inputContainer span{
+        padding: 5px 0 5px 5px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .inputContainer input{
+        width: 100%;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 300;   
+    }
+
+    .submitContainer{
+        border-radius: 8px;
+    }
+
+    .submitContainer input{
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}

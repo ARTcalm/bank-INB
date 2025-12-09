@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+:root{
+    --maxWidth: 1200px;
+    --containerBgColor:#4e247330;
+    --containerBorderColor:rgba(255, 255, 255, 0.15);
+    --containerBoxShadowColor: #4e2473;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 1),rgba(37, 23, 48, 1),rgba(35, 33, 70, 0.96),rgba(17, 17, 35, 1),rgba(0, 0, 0, 1));
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+@keyframes gradientShift {
+    0%  {background-position: 0% 50%;}
+    50% {background-position: 100% 100%}
+    100% {background-position: 0% 50%;}
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: var(--maxWidth);
+    @media (max-width:1200px) and (min-width:768px){
+        max-width: 768px;
+    }
+    @media (max-width:767px) and (min-width:426px){
+        max-width: 425px;
+    }
+    @media (max-width:425px) {
+        max-width: 320px;
+    }
+}
+
+
+footer{
+    margin-top: auto;
+}
+
+h1{
+    font-size: 48px;
+    color: white;
+    @media (max-width:1200px) and (min-width:768px) {
+        font-size: 36px;
+    }
+
+    @media (max-width:767px) and (min-width:426px) {
+        font-size: 24px;;
+    }
+
+    @media (max-width:425px) {
+        font-size: 20px;
+    }
+}
+
+h1 a{
+    font-size: 96px;
+    @media (max-width:1200px) and (min-width:768px) {
+        font-size: 56px;
+    }
+    @media (max-width:767px) and (min-width:426px) {
+        font-size: 36px;;
+    }
+    @media (max-width:425px) {
+        font-size: 24px;
+    }
+}
+

@@ -1,0 +1,139 @@
+.investActivityContainer{
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.activityCardsContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.activityCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: white;
+    width: 360px;
+    height: 360px;
+    border-radius: 32px;
+    transition: all 500ms ease;
+}
+
+.activityCard:hover{
+    transform: scale(1.05);
+}
+
+.activityCard div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.activityCard h3{
+    font-size: 24px;
+    font-weight: 700;
+    max-width: 285px;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.activityCard p{
+    max-width: 320px;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+
+
+.activityCard img{
+    position: absolute;
+    z-index: -1;
+    width: inherit;
+    height: inherit;
+}
+
+@media (max-width:1200px) and (min-width:768px){    
+    .investActivityContainer{
+        margin-bottom: 20px;
+        max-width: 768px;
+    }
+
+    .activityCardsContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .activityCard{
+        align-items: start;
+        justify-content: center;
+        text-align: center;
+        width: 768px;
+        height: 350px;
+        background: var(--containerBgColor);
+        border: 1px solid var(--containerBorderColor);
+    }
+
+    .activityCard img{
+        width: 350px;
+        height: 350px;
+        align-self: end;
+    }
+
+    .activityCard div{
+        margin-left: 20px;
+    }
+
+
+}
+
+@media (max-width:767px){
+    .investActivityContainer{
+        margin-bottom: 20px;
+    }
+
+    .activityCardsContainer{
+        gap: 15px;
+    }
+
+    .activityCard{
+        width: 425px;
+        height: 425px;
+    }
+
+    .activityCard div{
+        gap: 10px;
+    }
+    .activityCard h3{
+        font-size: 24px;
+        max-width: 300px;
+    }
+
+    .activityCard p{
+        max-width: 330px;
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width:425px){
+    .activityCard{
+        width: 320px;
+        height: 320px;
+    }
+    .activityCard h3{
+        font-size: 18px;
+        max-width: 205px;
+    }
+
+    .activityCard p{
+        max-width: 270px;
+        font-size: 14px;
+    }
+
+}

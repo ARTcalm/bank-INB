@@ -1,0 +1,159 @@
+.appMainContainer{
+    max-width: 1200px;
+    margin-bottom: 90px;
+    width: 100%;
+}
+
+.appMainContainer h1{
+    max-height: 170px;
+    margin-bottom: 20px;
+}
+
+.appMainContainer h1 a{
+    font-family: "Moul", sans-serif;
+    font-size: 128px;
+}
+.appDescContainer{
+    box-shadow: 0px 0px 30px #4e2473;
+    display: flex;
+    max-width: max-content;
+    background: var(--containerBgColor);
+    border: 1px solid var(--containerBorderColor);
+    padding: 75px 45px 75px 115px;
+    border-radius: 48px;
+    gap: 140px;
+}
+
+.appIcon{
+    box-shadow:0px 0px 30px #29133dff;
+    border-radius:64px;
+}
+
+.appDownloadDesc{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.appDownloadDesc h1{
+    max-height: 80px;
+    text-align: right;
+    font-size: 36px;
+    margin: 0;
+}
+.appDownloadDesc h1 a{
+    font-size: 64px;
+}
+
+.appDownloadDesc p{
+    margin: 0;
+    color:white;
+    text-align: right;
+    font-size: 20px;
+    max-width: max-content;
+}
+
+.appButtonsContainer{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.appButtonsContainer a{
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.appButtonsContainer a:hover{
+    opacity: 0.7;
+}
+
+
+@media (max-width:1200px) and (min-width:768px){
+    .appMainContainer{
+        max-width: 768px;
+    }
+    .appMainContainer h1 a{
+        font-size: 64px;
+    }
+    .appDescContainer{
+        padding: 20px;
+        gap: 20px;
+    }
+    .appDescContainer img{
+        box-shadow: none;
+        border-radius:0;
+    }
+    .appDownloadDesc{
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .appDownloadDesc h1{
+        font-size: 24px;
+        margin: 0;
+        
+    }
+
+    .appDownloadDesc h1 a{
+        font-size: 36px;
+    }
+
+    .appDownloadDesc p{
+        font-size: 18px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width:767px){
+    .appMainContainer{
+        margin-bottom: 30px;
+    }
+
+    .appMainContainer h1 a{
+        font-size: 24px;
+    }
+    .appDescContainer{
+        padding: 20px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .appDescContainer img{
+        box-shadow: none;
+        border-radius:0;
+    }
+
+    .appDownloadDesc{
+        gap: 10px;
+    }
+    .appDownloadDesc h1{
+        text-align: right;
+        font-size: 20px;
+        margin: 0;
+        max-width: 100%;
+    }
+    .appDownloadDesc h1 a{
+        font-size: 36px;
+    }
+
+    .appDownloadDesc p{
+        font-size: 16px;
+        max-width: 100%;
+    }
+    .appButtonsContainer img{
+        max-width: 100%;
+    }
+}
+
+@media (max-width:425px){
+    .appDownloadDesc h1{
+        font-size: 12px;
+    }
+    .appDownloadDesc h1 a{
+        font-size: 24px;
+    }
+
+    .appDownloadDesc p{
+        font-size: 8px;
+    }
+}

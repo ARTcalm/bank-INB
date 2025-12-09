@@ -1,0 +1,237 @@
+.investStockSliderContainer{
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.sliderContainer{
+    background: var(--containerBgColor);
+    border: 1px solid var(--containerBorderColor);
+    border-radius: 64px;
+    padding: 40px 40px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 30px var(--containerBoxShadowColor);
+}
+
+.sliderMonitor{
+    position: relative;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+    width: 1080px;
+    padding: 20px 0 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.sliderTrack{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    transition: all 500ms ease;
+}
+
+.slide{
+    width: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width:max-content;
+    padding: 25px 40px;
+    background: var(--containerBgColor);
+    border:1px solid var(--containerBorderColor);
+    border-radius: 32px;
+    box-shadow: 0px 0px 5px var(--containerBoxShadowColor);
+}
+
+.stock img{
+    border-radius: 32px;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.stock h1,.stock p{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: right
+}
+
+.stock h1 a{
+    font-size: 20px;
+    font-weight: 600;
+    color:#8F8F8F;
+    background: none;
+    padding: 0;
+    border: none;
+    border-radius:0;
+    box-shadow: none;
+}
+
+.stockDesc{
+    text-align: right;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 250px;
+   
+}
+
+.stockDesc a{
+    max-width: max-content;
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 5px 23px;
+    background: #4e2473;
+    border: 1px solid var(--containerBorderColor);
+    border-radius: 32px;
+    box-shadow: 0px 0px 15px var(--containerBoxShadowColor);
+    transition: all 500ms ease;
+}
+
+.stockDesc a:hover{
+    background: white;
+    color:black;
+    box-shadow: 0px 0px 15px black;
+}
+
+.sliderMonitor::-webkit-scrollbar{
+    appearance: none;
+}
+
+
+@media (max-width:1200px) and (min-width:768px){
+    .sliderMonitor{
+        width: 600px;
+        padding: 25px;
+    }
+    .sliderTrack{
+        align-items: center;
+        gap: 20px;
+    }
+    .slide{
+        width: 590px;
+        align-items: stretch;
+        justify-content: start;
+        gap: 5px 20px;
+    }
+    .stock{
+        max-width: 600px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:767px){
+    .investStockSliderContainer{
+        margin-top: 30px;
+    }
+
+    .sliderContainer{
+        border-radius: 32px;
+        padding: 20px 20px;
+    }
+
+    .arrow{
+        display: none;
+    }
+
+    .sliderMonitor{
+        width: 425px;
+        height: max-content;
+        padding: 0;
+
+    }
+    .sliderTrack{
+        align-items: center;
+        gap: 20px;
+    }
+
+    .slide{
+        width: 790px;
+        height: 500px;
+        align-items: stretch;
+        justify-content: start;
+        gap: 5px 20px;
+    }
+    .stock{
+        width: 340px;
+        padding: 20px;
+        gap: 30px;
+        box-shadow: none;
+    }
+    .stock img{
+        border-radius:8px;
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    .stock h1,.stock p, .stock h1 a{
+        font-size: 20px;
+        font-weight: 600;
+        text-align:left;
+        margin: 5px 0px;
+    }
+
+
+    .stockDesc{
+        text-align: right;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: max-content;
+        gap: 10px;
+    
+    }
+
+    .stockDesc a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:425px) {
+    .sliderMonitor{
+        width: 320px;
+    }
+
+    .slide{
+        width: 570px;
+        height: 500px;
+    }
+    .stock{
+        width: 200px;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .stock img{
+        max-width: 90px;
+        max-height: 90px;
+    }
+
+    .stock h1,.stock p, .stock h1 a{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .stockDesc {
+        gap: 0;
+    }
+
+    .stockDesc a{
+        font-size: 14px;
+    }
+}

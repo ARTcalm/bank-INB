@@ -1,0 +1,331 @@
+.menuContainerBG{
+    display: flex ;
+    justify-content: center;
+    cursor: pointer;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(100px);
+    z-index: 400;
+    transform: translateY(-100%);
+}
+
+
+.menuContainerContent{
+    position: relative;
+    justify-self: center;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+    border-radius: 48px;
+    padding-bottom: 20px;
+    background: var(--containerBgColor);
+    margin: 0 auto;
+}
+
+.menuUpPanel{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    height: max-content;
+    flex-wrap: wrap;
+    width: 1200px;
+    border-radius:48px;
+}
+
+.menuUpLeft{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-height: min-content;
+    border-radius: 48px;
+    padding: 20px 35px;
+    background: #4E2473;
+    color:white
+}
+
+.menuUpLeft img{
+    max-width: 70px;
+    height: max-content;
+    cursor: pointer;
+}
+
+.menuUpLeftButton{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-height: min-content;
+}
+
+.menuUpCenter{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menuUpCenter a{
+    cursor: pointer;
+    max-height: min-content;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    color:black;
+}
+
+.menuUpRight{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    border-radius: 48px;
+    padding: 10px 20px;
+    background: #4E2473;
+    color:white;
+    cursor: pointer;
+}
+
+.menuUpRight input{
+    background: white;
+    border: 0;
+    outline: none;
+    border-radius: 48px;
+    padding: 5px 10px;
+    width: 200px;
+}
+
+
+.menuUpRight input::placeholder{
+    font-size: 14px;
+    font-weight: 200;
+    font-family: "Montserrat",sans-serif;
+    color:black;
+}
+
+.menuDownPanel{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    max-width: max-content;
+    flex-wrap: wrap;
+    gap: 90px;
+}
+
+.menuDownLinks{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:90px;
+    max-width: 720px;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.menuDownLinks div{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.menuDownLinks a{
+    text-decoration: none;
+    cursor: pointer;
+    color:white;
+    margin: 0;
+    max-width: 350px;
+    transition: all 300ms ease;
+    &:hover{
+        color: gray;
+    }
+}
+
+.menuDownProfileContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px 44px 36px 44px;
+    border-radius: 48px;
+}
+
+.menuDownProfileContainer h1{
+    font-size: 20px;
+    font-weight: 500;
+    color:black;
+    text-align: center;
+}
+
+.menuDownProfileContainer div{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.menuDownProfileContainer div p{
+    cursor: pointer;
+    margin: 0;
+}
+
+.menuDownProfileContainer div p a{
+    background: black;
+    color:white;
+    padding: 10px 23px;
+    border-radius: 48px;
+    margin-left: 10px;
+}
+
+@media (max-width:1200px) and (min-width:768px) {    
+    .menuContainerContent{
+        max-width: 768px;
+        border-radius: 0;
+        background: none;
+        margin-top: 0px;
+    }
+     .menuUpPanel{
+        display: flex;
+        justify-content: center;
+        max-width: 768px;
+        font-size: 14px;
+        gap: 10px;
+        border-radius: 32px 32px 0 0;
+    }
+    .menuUpPanel img{
+        display: none;
+    }
+    .menuUpLeft{
+        padding: 0 25px;
+        border-radius: 32px 0 0 0;
+        background: none;
+        color: black;
+    }
+
+    .menuUpRight{
+        display: none;
+    }
+     .menuDownPanel{
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap:20px;
+        margin-top: 0;
+        border-radius: 0 0 48px 48px;
+        background: var(--containerBgColor);
+    }
+
+    .menuDownLinks{
+        margin-top: 20px;
+    }
+    .menuDownProfileContainer{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .menuDownProfileContainer div{
+        flex-direction: row;
+    }
+}
+
+@media (max-width:767px) {
+    .menuContainerContent{
+        max-width: 425px;
+        border-radius: 0;
+        background: none;
+        margin-top: 0px;
+        height: 80vh;
+        overflow-y: scroll;
+    }
+    .menuUpPanel{
+        max-width: 425px;
+        flex-direction: column;
+        gap: 0px;
+        border-radius: 0;
+    }
+    .menuUpCenter{
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        width: 100%;
+    }
+
+    .menuUpCenter a{
+        max-width: 100%;
+        width: 100%;
+        border-bottom:1px solid black ;
+        padding: 20px 0;
+    }
+
+    .menuUpCenter a:last-child{
+        border-bottom: 0;
+    }    
+
+    .menuUpLeft, .menuUpRight{
+        width: 100%;
+        padding: 20px 0;
+        border-radius: 0;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .menuUpRight input{
+        width: 80%;
+    }
+    
+    .menuDownPanel{
+        max-width: 100%;
+        width: 100%;
+        margin-top: 15px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .menuDownLinks{
+        width: 100%;
+        gap:0;
+        font-size: 20px;
+        justify-content: space-between;
+    }
+    .menuDownLinks div{
+        gap: 10px;
+    }
+    .menuDownProfileContainer{
+        width: 100%;
+        padding: 30px 0;
+    }
+}
+
+@media (max-width:425px) {
+    .menuContainerContent{
+        max-width: 320px;
+    }
+    .menuUpPanel{
+        max-width: 320px;
+    }
+    .menuDownLinks{
+        font-size: 16px;
+    }
+}
+
+
+@keyframes activationMenu {
+    from {transform: translateY(-100%);}
+    to{transform: translateY(0%); display: flex;}
+}
+
+@keyframes deactivationMenu {
+    from {transform: translateY(0%);}
+    to{transform: translateY(-100%); display: none;}
+}
+
+.activeMenu{
+    animation: activationMenu 0.5s ease forwards
+}
+
+.inactiveMenu{
+    display: none;
+}

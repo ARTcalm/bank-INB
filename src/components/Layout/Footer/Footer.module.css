@@ -1,0 +1,136 @@
+.footerContainer{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 48px 48px 0 0;
+    border-top: 1px solid var(--containerBorderColor);
+    box-shadow: 0px 0px 30px var(--containerBgColor);
+    display: flex;
+    justify-content: center;
+}
+
+.footerMenuContainer{
+    max-width: 1200px;
+    width: 100%;
+    padding: 60px 20px 40px 20px;
+}
+
+.footerMenuContainer img{
+    display: flex;
+    justify-self: flex-end;
+    margin-top: 90px;
+}
+
+.menuBlock{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menuBlock div{
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.menuBlock div h1{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.menuBlock div a{
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 400;
+    color:white;
+}
+
+.menuBlock div a p{
+    margin: 0;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.menuBlock div a p:hover{
+    color: gray;
+}
+
+@media (max-width:1200px) and (min-width:768px){
+    .footerMenuContainer{
+        max-width: 768px;
+        padding: 60px 40px 40px 40px;
+    }
+    .menuBlock{
+        gap: 40px;
+    }
+    .menuBlock div{
+        max-width: 200px;
+    }
+}
+
+@media (max-width:767px) and (min-width:426px){
+    .footerMenuContainer{
+        max-width: 425px;
+    }
+    .menuBlock{
+        gap: 20px;
+    }
+
+    .menuBlock div{
+        max-width: 160px;
+    }
+
+    .menuBlock div h1{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width:425px) {
+    .footerContainer{
+        border-radius: 16px 16px 0 0;
+    }
+
+    .footerMenuContainer{
+        max-width: 280px;
+        padding: 20px 0 10px 0;
+    }
+
+    .footerMenuContainer img{
+        margin-top: 20px;
+        max-width: 100px;
+    }
+
+    .menuBlock{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
+    .menuBlock div{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px
+    }
+
+    .menuBlock div h1{
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .menuBlock div a{
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+
+}

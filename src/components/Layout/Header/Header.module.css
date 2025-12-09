@@ -1,0 +1,125 @@
+.headerContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.headerMenuContainer{
+    max-width: 1200px;
+    margin-top: 20px;
+    display: flex;
+    color:white;
+    background-color: var(--containerBgColor);
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid #4e2473;
+    border-radius: 48px;
+    box-shadow: 0px 0px 15px var(--containerBoxShadowColor);
+}
+
+.menuButtons{
+    display: flex;
+    color:white;
+    align-items: center;
+    max-height: max-content;
+}
+
+.menuNavButtons{
+    display: flex;
+    align-items: center;
+}
+
+
+.menuNavButtons a, .openMenu, .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:200px;
+    height: 80px;
+    gap: 20px;
+    border-right: 1px solid #4e2473;
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease;  
+}
+
+.menuNavButtons a:hover, .openMenu:hover, .logo:hover{
+    background: rgba(0, 0, 0, 0.300);
+}
+
+.menuNavButtons a:nth-child(4) {
+    border: 0;
+    border-radius: 0 48px 48px 0;
+}
+
+.logo{
+    border-radius: 48px 0 0 48px;
+}
+
+
+@media (max-width:1200px) and (min-width:768px){
+    .headerMenuContainer{
+        max-width: 768px;
+        width: 100%;
+        justify-content: space-around;
+        font-size: 16px;
+        border-radius: 16px;
+    }
+
+    .menuButtons{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .openMenu{
+        width: 20%;
+        border-radius: 16px 0 0 16px;
+        padding: 0 20px;
+    }
+    .menuNavButtons{
+        width: 100%;
+    }
+
+    .menuNavButtons a{
+        width: 100%;
+    }
+    .logo{
+        display: none;
+    }
+}
+
+
+
+@media (max-width:767px) {
+.headerContainer{
+    display: flex;
+}
+.headerMenuContainer{
+    background: none;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 16px;
+    max-height: max-content;
+    justify-content: space-around;
+}
+
+.menuNavButtons{
+    display: none;
+}
+
+.logo, .openMenu{
+    border: 0;
+    max-height: max-content;
+    max-width: max-content;
+    gap: 5px;
+}
+
+.logo img{
+    max-width: 60px;
+}
+
+.openMenu img{
+    max-width: 20px;
+}
+}

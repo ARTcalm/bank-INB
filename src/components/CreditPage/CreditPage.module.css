@@ -1,0 +1,63 @@
+.creditPageContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto;
+    width: 100%;
+}
+
+
+.openFormButton{
+    cursor: pointer;
+    max-width: max-content;
+    margin: 50px auto;
+    padding: 30px 40px;
+    border-radius: 64px;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    background: var(--containerBgColor);
+    border: 1px solid var(--containerBorderColor);
+    transition: all 300ms ease;
+    box-shadow: 0px 0px 15px var(--containerBoxShadowColor);
+}
+
+.openFormButton:hover{
+    color:#4E2473;
+    background: white;
+    box-shadow: 0px 0px 15px white;
+}
+
+
+
+.containerCards{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+@media (max-width:1200px) and (min-width:768px){
+    .creditPageContainer{
+        margin-top: 30px;
+    }
+    .openFormButton{
+        font-size: 20px;
+        margin: 10px auto 30px auto;
+    }
+}
+
+@media (max-width:767px){
+    .creditPageContainer{
+        margin-top: 20px;
+    }
+    .openFormButton{
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        max-width: 100%;
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px 0;
+        border-radius: 16px;
+        font-size: 18px;
+    }
+}

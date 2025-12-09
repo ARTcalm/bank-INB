@@ -1,0 +1,138 @@
+.businessLeasingContainer{
+    margin-bottom: 90px;
+    width: 100%;
+}
+
+
+.cardContainer{
+    display: flex;
+    color: white;
+    background: var(--containerBgColor);
+    border:1px solid var(--containerBorderColor);
+    border-radius: 48px;
+    box-shadow: 0px 0px 30px var(--containerBoxShadowColor);
+    transition: all 500ms ease;
+}
+
+.cardContainer:hover{
+    background: white;
+    color: #4E2473;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px white;
+}
+
+.cardContainer:hover .openFormButton{
+    background: white;
+    color: #4E2473;
+    border-color:none;
+    box-shadow: 0px 0px 30px gray;
+}
+
+.cardContainer:hover .openFormButton:hover{
+    color:white;
+    background: #4E2473;
+    border-color: var(--containerBorderColor);
+    box-shadow: 0px 0px 30px #4E2473;
+}
+
+.cardContainer img{
+    border-radius: 48px 0 0 48px;
+    max-width: 45%;
+}
+
+
+.cardDescContent{
+    padding:40px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.cardDescTitle{
+    font-size: 72px;
+    margin: 0;
+}
+
+.cardDescText{
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.openFormButton{
+    display: flex;
+    justify-content: center;
+    background: var(--containerBgColor);
+    color: white;
+    box-shadow: 0px 0px 30px var(--containerBgColor);
+    max-width: 100%;
+    width: 70%;
+    padding: 20px 0;
+    border: 1px solid var(--containerBorderColor);
+    border-radius: 64px;
+    font-size: 32px;
+    font-weight: 700;
+    transition: all 500ms ease;
+}
+
+@media (max-width:1200px) and (min-width:768px){
+    .businessLeasingContainer{
+        margin-bottom: 30px;
+    }
+
+    .cardDescTitle{
+        font-size: 36px;
+    }
+
+    .cardDescText{
+        font-size: 18px;
+    }
+
+    .openFormButton{
+        font-size: 18px;
+        padding: 10px 0px;
+    }
+}
+
+@media (max-width:767px) {
+    .businessLeasingContainer{
+        margin-bottom: 30px;
+    }
+    .cardContainer{
+        flex-wrap: wrap;
+        border-radius: 32px;
+    }
+
+    .cardContainer img{
+        border-radius: 32px 32px 0 0;
+        max-width: 100%;
+    }
+
+    .cardDescContent{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        text-align: left;
+        padding: 20px 30px;
+    }
+
+    .cardDescTitle{
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .cardDescText{
+        font-size: 14px;
+        font-weight: 200;
+    }
+    .openFormButton{
+        max-width: 100%;
+        font-size: 14px;
+        padding: 10px 0px;
+    }
+    
+}
+
+

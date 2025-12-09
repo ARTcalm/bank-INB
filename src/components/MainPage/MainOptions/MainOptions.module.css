@@ -1,0 +1,88 @@
+.mainOptionContainer{
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.optionCardsContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.optionCard{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: var(--containerBgColor);
+    border: 1px solid var(--containerBorderColor);
+    border-radius: 48px;
+    box-shadow: 0px 0px 30px var(--containerBoxShadowColor);
+    color: white;
+    padding: 50px 30px;
+    transition: all 500ms ease;
+}
+
+.optionCard:hover{
+    background: white;
+    color: #4e2473;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px white;
+}
+
+.optionCard h3{
+    margin: 0;
+    font-size: 36px;
+}
+
+.optionCard p{
+    font-size: 20px;
+}
+
+.optionCard svg{
+    max-width: 50px;
+}
+
+.optionCard a{
+    display: none;
+}
+
+@media (max-width:1200px) and (min-width:768px){
+    .optionCardsContainer{
+        gap: 20px;
+    }
+
+    .optionCard{
+        align-items: center;
+        text-align: center;
+        max-width: calc(768px/2.5);
+    }
+    .optionCard svg{
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 767px){
+    .mainOptionContainer{
+        margin-bottom: 30px;
+    }
+    .optionCard{
+        max-width: 100%;
+        padding: 20px calc(30px);
+        gap: 20px;
+        border-radius: 16px;
+    }
+
+    .optionCard h3{
+        font-size: 18px;
+    }
+
+    .optionCard p{
+        font-size: 14px;
+    }
+
+    .optionCard svg{
+        max-width: 50px;
+    }
+}

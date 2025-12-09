@@ -1,0 +1,443 @@
+.mainCardSliderBlock{
+  width: 100%;
+}
+.slider{
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 1200px;
+  height: 700px;
+}
+
+.arrow svg{
+    box-shadow: 0px 0px 15px var(--containerBoxShadowColor);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    border: 1px solid var(--containerBorderColor);
+    color: white;
+    background: var(--containerBgColor);
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    transition: all 300ms ease;
+}
+
+.arrow svg:hover{
+  box-shadow: 0px 0px 15px white;
+  color: #4E2473;
+  background: white;
+}
+
+.card{
+  min-height: max-content;
+  max-width: 1000px;
+  padding: 55px 55px;
+  position: absolute;
+  border-radius: 64px;
+  backdrop-filter: blur(10px);
+  color:white;
+  background: var(--containerBgColor);
+  border: 1px solid var(--containerBorderColor);
+  display: flex;
+  flex-direction: column;
+  transition: all 100ms ease;
+  box-shadow: 0px 0px 30px var(--containerBoxShadowColor);
+}
+
+.card h1{
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.cardContainerContent{
+  display: flex;
+  gap: 50px;
+}
+
+.cardLeftContent{
+  width: 500px;
+  min-height: max-content;
+}
+
+.cardLeftContent img{
+  width: 400px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.cardInfo div{
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cardInfo p{
+  margin: 0;
+}
+
+.cardRightContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardRightContent h2{
+  width: max-content;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.cardChooseStyleButtons{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  width: 225px;
+  gap: 20px;
+  padding: 10px;
+}
+
+.cardChooseButtonBg{
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardChooseButtonBg img{
+  width: inherit;
+  cursor: pointer;
+  transition: transform 500ms ease;
+  border-radius: 16px;
+}
+
+.cardChooseButtonBg img:hover{
+  transform: scale(1.05);
+}
+
+.activeChangeIcon{
+  border: 3px solid white;
+  border-radius: 16px;
+}
+
+.openFormButton{
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: bold;
+  background: var(--containerBgColor);
+  border: 1px solid var(--containerBorderColor);
+  color: white;
+  box-shadow: 0px 0px 15px var(--containerBgColor);
+  max-width: max-content;
+  max-height: max-content;
+  padding:  15px 44px;
+  border-radius: 24px;
+  margin: 0 auto;
+  transition: all 500ms ease;
+}
+
+.openFormButton:hover{
+  color: #4E2473;
+  background: white;
+  box-shadow: 0px 0px 15px white;
+}
+
+.card:nth-child(1){
+  transform: scale(0.7);
+  filter: blur(5px);
+}
+
+@media (max-width:1200px) and (min-width:768px) {
+  .mainCardSliderBlock{
+    width: 768px;
+  }
+  .slider{
+    max-width: 768px;
+    height: 600px;
+  }
+  .arrow svg{
+      width: 20px;
+      height: 20px;
+  }
+
+  .card{
+    max-width: 600px;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card h1{
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .cardLeftContent{
+    width: max-content;
+    min-height: max-content;
+  }
+
+  .cardLeftContent img{
+    width: 300px;
+    margin-bottom: 0;
+    border-radius: 16px;
+  }
+
+  .cardInfo div{
+    font-size: 16px;
+  }
+
+  .cardRightContent{
+    margin-left: 20px;
+  }
+  .cardRightContent h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .cardChooseStyleButtons{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    width: 225px;
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .cardChooseButtonBg{
+    width: 50px;
+    height: 50px;
+  }
+
+  .cardChooseButtonBg img{
+    border-radius: 10px;
+  }
+
+  .openFormButton{
+    font-size: 24px;
+  }
+
+  .activeChangeIcon{
+    border: 2px solid white;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width:767px) and (min-width:426px){
+  .mainCardSliderBlock{
+    max-width: 425px;
+  }
+
+  .slider{
+    max-width: 425px;
+    height: 720px;
+  }
+
+  .arrow svg{
+      width: 10px;
+      height: 10px;
+      padding: 10px;
+  }
+
+  .card{
+    max-width: 300px;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card h1{
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .cardLeftContent img{
+    max-width: 300px;
+    border-radius: 16px;
+  }
+
+  .cardContainerContent{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cardLeftContent{
+    max-width: 300px;
+  }
+
+  .cardInfo div{
+    font-size: 16px;
+    padding: 0;
+  }
+  
+  .cardRightContent{
+    max-width: 300px;
+  }
+
+  .cardRightContent h2{
+    font-size: 24px;
+  }
+
+  .cardChooseStyleButtons{
+    padding: 0;
+    width: 190px;
+    gap: 20px;
+  }
+
+  .cardChooseButtonBg{
+    width: 50px;
+    height: 50px;
+  }
+
+  .cardChooseButtonBg img{
+    border-radius: 8px;
+  }
+
+  .openFormButton{
+    font-size: 24px;
+    padding: 15px 60px;
+  }
+}
+
+@media (max-width: 425px){
+  .mainCardSliderBlock{
+    max-width: 320px;
+  }
+
+  .slider{
+    max-width: 320px;
+    height: 600px;
+  }
+
+  .arrow svg{
+      width: 10px;
+      height: 10px;
+      padding: 10px;
+  }
+
+  .card{
+    max-width: 180px;
+    padding: 25px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card h1{
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .cardContainerContent{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cardLeftContent{
+    width: auto
+  }
+
+  .cardLeftContent img{
+    width: 180px;
+    margin-bottom: 0;
+    border-radius: 8px;
+  }
+
+  .cardInfo div{
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .cardRightContent{
+    max-width: 180px;
+    align-items: center;
+  }
+
+  .cardRightContent h2{
+    font-size: 16px;
+  }
+
+  .cardChooseStyleButtons{
+    padding: 0;
+    width: 180px;
+    gap: 20px;
+  }
+
+  .cardChooseButtonBg{
+    width: 40px;
+    height: 40px;
+  }
+
+  .cardChooseButtonBg img{
+    border-radius: 8px;
+  }
+
+  .openFormButton{
+    font-size: 16px;
+  }
+
+  .activeChangeIcon{
+    border: 1px solid white;
+    border-radius: 8px;
+  }
+
+}
+
+@keyframes toleftLC {
+  0%{transform: translateX(0px) ;}
+  50%{transform: translateX(-101%);}
+  100%{transform: translateX(0px) scale(0.7); z-index: 1;filter:blur(5px)}
+}
+
+@keyframes torightLC {
+  0%{transform: translateX(0px) scale(0.7)  ;}
+  50%{transform: translateX(101%); }
+  100%{transform: translateX(0px) scale(1); z-index: 4;filter:blur(0px)}
+}
+@keyframes toleftRC {
+  0%{transform: translateX(0px) scale(0.7) ;filter: blur(5px);}
+  50%{transform: translateX(-101%);}
+  100%{transform: translateX(0px) scale(1); z-index: 4; filter: blur(0px)}
+}
+
+@keyframes torightRC {
+  0%{transform: translateX(0px) scale(1);filter: blur(0px)}
+  50%{transform: translateX(101%);}
+  100%{transform: translateX(0px) scale(0.7); z-index: 1;filter: blur(5px)}
+}
+
+
+.card_animate_left_LC{
+    animation: toleftLC 0.8s ease forwards;
+}
+
+.card_animate_right_LC{
+    animation: torightLC 0.8s ease forwards;
+}
+
+.card_animate_left_RC{
+    animation: toleftRC 0.8s ease forwards;
+}
+
+.card_animate_right_RC{
+    animation: torightRC 0.8s ease forwards;
+}

@@ -1,0 +1,98 @@
+.servicesContainer{
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.serviceCardsContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.serviceCard{
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    max-width: 300px;
+    background: white;
+    color:#4e2473;
+    border: 1px solid var(--containerBorderColor);
+    border-radius: 32px;
+    box-shadow: 0px 0px 5px white;
+    padding: 30px;
+    transition: all 500ms ease;
+}
+
+.serviceCard:hover{
+    transform: scale(1.05);
+}
+
+.serviceCard h3{
+    font-size: 20px;
+    margin: 0;
+}
+
+
+.serviceCard svg {
+    background: #4e2473;
+    color: white;
+    box-shadow: 0px 0px 15px var(--containerBoxShadowColor);
+    border-radius: 64px;
+    padding: 10px;
+    max-width: 50px;
+    transition: all 500ms ease;
+}
+
+.serviceCard a{
+    display: none;
+}
+
+
+@media (max-width:1200px) and (min-width:768px){
+    .serviceCardsContainer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .serviceCard{
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
+    }
+    .serviceCard h3{
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 767px){
+    .servicesContainer{
+        margin-bottom: 30px;
+    }
+    
+    .serviceCardsContainer{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .servicesContainer h1{
+        margin-bottom: 20px;
+    }
+
+    .serviceCard{
+        max-width: 100%;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .serviceCard h3{
+        font-size: 18px;
+    }
+
+    .serviceCard p{
+        font-size: 14px;
+    }
+
+
+}
