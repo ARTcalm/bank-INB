@@ -7,16 +7,20 @@ import { OpenButton } from "../../OpenButton/OpenButton"
 import { CARDS } from "../../../consts"
 
 export const MainCardSlider = () =>{
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const [isActiveLeft, setIsActiveLeft] = useState(false)
-    const [isActiveRight, setIsActiveRight] = useState(false)
-    const [isActiveCard, setIsActiveCard] = useState(null)
-    const [items, setItems] = useState(CARDS)
-    const getItems = () => {
-        return [items[currentIndex], items[(currentIndex+1)%items.length]]
-    }
-    const displayItems = getItems()
+    const [currentIndex, setCurrentIndex] = useState(0) // Индекс отображаемого слайда
+    const [isActiveLeft, setIsActiveLeft] = useState(false) // Состояние активности левой стрелки
+    const [isActiveRight, setIsActiveRight] = useState(false) // Состояние активности правой стрелки
+    const [isActiveCard, setIsActiveCard] = useState(null) // Состояние активности выбранной карточки, при нажатии эффект её активации
+    const [items, setItems] = useState(CARDS) 
 
+    // Инициализируем необходимые карточки
+    const getItems = () => {
+        return [items[currentIndex], items[(currentIndex+1)%items.length]] 
+    }
+
+    // Визуализируем их
+    const displayItems = getItems()
+    // Функция изменения дизайеа главной карточки при нажатии на одну из пула выбора 
     const handleChangeCardIcon = (srcBigCard, blockID, imgID) => {
         setItems( prevItem => {
                 return prevItem.map( el => {
@@ -35,6 +39,8 @@ export const MainCardSlider = () =>{
         })
 
     }
+
+    // Предыдущая карточка
     const prevSlide = () =>{   
         setIsActiveRight(false)
         setIsActiveLeft(true)
@@ -43,6 +49,7 @@ export const MainCardSlider = () =>{
             setCurrentIndex(prev =>(prev-1+items.length)%items.length)
         },800)
     }
+    // Следующая карточка
     const nextSlide = () =>{
         setIsActiveLeft(false)
         setIsActiveRight(true)
@@ -51,6 +58,10 @@ export const MainCardSlider = () =>{
             setCurrentIndex(prev => (prev+1)%items.length)
         },800)
     }
+
+    // Функция стоп при прокликивании одной и той же кнопки
+    // Нужна, чтобы не баговалось анимации при быстро клике на кнопку
+    // с её помощью анимация произойдёт только через 300мс после остановки прокликивания
     const debounce = (func, delay) => {
         let timer;
         return () => {

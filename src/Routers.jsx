@@ -1,7 +1,4 @@
 import {Route, Routes, useLocation} from "react-router-dom"
-import {Header} from "./components/Layout/Header/Header.jsx"
-import { Footer } from "./components/Layout/Footer/Footer.jsx"
-import { Menu } from "./components/Layout/Menu/Menu.jsx"
 import { useEffect, useState } from "react"
 import { CreditPage } from "./components/CreditPage/CreditPage.jsx"
 import { BusinessPage } from "./components/BusinessPage/BusinessPage.jsx"
@@ -18,11 +15,11 @@ export const Routers = (props) => {
   const { pathname, hash, key } = useLocation();
 
   useEffect(() => {
-    // if not a hash link, scroll to top
+    // если привязки к определённому блоку нет, скроллить до вверха страницы
     if (hash === '') {
       window.scrollTo(0, 0);
     }
-    // else scroll to id
+    // иначе скроллить до блока
     else {
       setTimeout(() => {
         const id = hash.replace('#', '');
@@ -34,7 +31,7 @@ export const Routers = (props) => {
     }
   }, [pathname, hash, key]);
 
-
+  //при открытии меню выключать скроллинг у страницы
   useEffect(() =>{
     if(menuState){document.body.style.overflowY = "hidden"}
     else{document.body.style.overflowY = "visible"}

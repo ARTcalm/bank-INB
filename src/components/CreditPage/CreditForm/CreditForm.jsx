@@ -7,17 +7,19 @@ import { useLocation, useNavigate } from "react-router"
 import { LoanPeriodOptions, LoanReasonOptions } from "../../../consts"
 
 export const CreditForm = () => {
-    const [displayPeriodOptions,setDisplayPeriodOptions] = useState(LoanPeriodOptions)
-    const [displayReasonOptions, setDisplayReasonOptions] = useState(LoanReasonOptions)
-    const [totalMoneyValue, setTotalMoneyValue] = useState(100000)
-    const [periodValue, setPeriodValue] = useState(displayPeriodOptions[0].value)
-    const [keyRateValue, setKeyRateValue] = useState(20)
-    let [isSelectPeriod, setIsSelectPeriod] = useState(false)
-    let [isSelectReason, setIsSelectReason] = useState(false)        
+    const [displayPeriodOptions,setDisplayPeriodOptions] = useState(LoanPeriodOptions) //Периоды кредитования
+    const [displayReasonOptions, setDisplayReasonOptions] = useState(LoanReasonOptions) // Причины кредитования
+    const [totalMoneyValue, setTotalMoneyValue] = useState(100000) // Сумма кредитования
+    const [periodValue, setPeriodValue] = useState(displayPeriodOptions[0].value) //Базово выбранный период кредитования
+    const [keyRateValue, setKeyRateValue] = useState(20) // Кредитная ставка при подсчётах
+    let [isSelectPeriod, setIsSelectPeriod] = useState(false) // Состояние активности блока с выбором периода кредитования
+    let [isSelectReason, setIsSelectReason] = useState(false) // Состояние активности блока с выбором причины кредитования
+    // Аннуитетный способ оплата кредита (в будущем будет дифференцированный)        
     const annuityMonthlyPayment =(totalMoneyValue*(keyRateValue/100/12*(1+keyRateValue/100/12)**(periodValue*12)/((1+keyRateValue/100/12)**(periodValue*12)-1))).toFixed(2)
-    let [displayTitlePeriod, setDisplayTitlePeriod] = useState(displayPeriodOptions[0].title)
-    let [displayTitleReason, setDisplayTitleReason] = useState(null)
+    let [displayTitlePeriod, setDisplayTitlePeriod] = useState(displayPeriodOptions[0].title) //Базово отображаемый период кредитования
+    let [displayTitleReason, setDisplayTitleReason] = useState(null) // Базово в причине кредитования ничего не отображается
 
+    // Функция открытия блоков с выбором периода или причины кредитования
     const OpenSelectOption = (value) =>{
         if(value === "period"){
             setIsSelectPeriod(isSelectPeriod = !isSelectPeriod)
@@ -28,6 +30,7 @@ export const CreditForm = () => {
             setIsSelectReason(isSelectReason = !isSelectReason)
         }
     }
+    // Изменение суммы кредитования
     const handleChangeValue = (event) => {
         const value = parseFloat(event.target.value)
         if(event.target.id === "money"){
@@ -42,18 +45,20 @@ export const CreditForm = () => {
             }
         }
     }
+    // Изменение периода кредитования
     const handleChangePeriod = (title, value) => {
         setDisplayTitlePeriod(title)
         setPeriodValue(value)
         setIsSelectPeriod(isSelectPeriod = !isSelectPeriod)
     }
+    // Изменение причины кредитования
     const handleChangeReason = (title) =>{
         setDisplayTitleReason(title)
         setIsSelectReason(isSelectReason = !isSelectReason)
     }
+    // Необходимо для возврата на прошлый URL-адрес в истории
+    // при нажатии на кнопку Вернуться
     const navigate = useNavigate();
-
-
     return(
         <main>
         <div className={style.creditFormBg}>

@@ -4,7 +4,8 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 import { STOCKS } from "../../../consts"
 
 export const InvestStockSlider = () => {
-    const [stocks,setStocks] = useState(STOCKS)
+    const [stocks,setStocks] = useState(STOCKS) 
+    // Получения 3 пулов карточек акций по их индексам в массиве
     const getStocks = () => {
         return [
             stocks.slice(0,6),
@@ -12,9 +13,12 @@ export const InvestStockSlider = () => {
             stocks.slice(12,18)
         ]
     }
+
+    // Отображение карточек
     const displayStocks = getStocks()
     const sliderRef = useRef(null)
     let currentIndex = 0
+    // Функция скрола до определённого пула акций по индексу
     const scrollToElement = (index) => {
         currentIndex = currentIndex+index
         if(currentIndex === sliderRef.current.children.length){
